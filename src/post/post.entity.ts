@@ -27,7 +27,7 @@ export class Post extends BaseEntity {
     type: 'decimal',
     transformer: new ColumnNumericTransformer(),
   })
-  logitude: number;
+  longitude: number;
 
   @Column()
   color: MarkerColor;
