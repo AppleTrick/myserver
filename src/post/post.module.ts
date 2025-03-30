@@ -6,7 +6,7 @@ import { Post } from './post.entity';
 import { AuthModule } from 'src/auth/auth.module';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Post]), AuthModule],
+  imports: [TypeOrmModule.forFeature([Post, Image]), AuthModule],
   controllers: [PostController],
   providers: [PostService],
 })
