@@ -1,3 +1,4 @@
+import { Favorite } from 'src/favorite/favorite.entity';
 import { MarkerColor } from 'src/post/marker-color.enum';
 import { Post } from 'src/post/post.entity';
 import {
@@ -66,4 +67,7 @@ export class User extends BaseEntity {
   //  User 와 Post 테이블간의 관계 설정
   @OneToMany(() => Post, (post) => post.user, { eager: false })
   post: Post[];
+
+  @OneToMany(() => Favorite, (favorite) => favorite.user)
+  favorites: Favorite[];
 }
